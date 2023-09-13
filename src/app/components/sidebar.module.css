@@ -1,0 +1,86 @@
+.sideBar {
+  background-color: var(--sideBarDarkMode);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.showSideBar {
+  width: 24rem;
+  padding: 6rem 2rem;
+  transition: all 0.5s ease-in-out;
+}
+.closeSideBar {
+  width: 8rem;
+  padding: 6rem 0;
+  transition: width 0.5s ease-in-out;
+}
+.elementLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.containerTopElements {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.containerElements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.toggleButton {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  width: max-content;
+  padding: 0 2rem;
+  color: white;
+}
+.link {
+  padding: 1rem 2rem;
+  font-size: 18px;
+  display: flex;
+  gap: 1rem;
+  color: var(--sideBarFontColor);
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.link:hover {
+  background-color: var(--sideBarActiveAndHoverElement);
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+.activeLink {
+  background-color: var(--sideBarActiveAndHoverElement);
+  color: white;
+}
+.logOutButton {
+  background-color: var(--buttonPrincipalColor);
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  font-weight: bolder;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #e1e1e1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.logOutButton:hover {
+  /*background-color: var(--buttonPrincipalHoverColor);*/
+  color: white;
+  background-color: var(--buttonPrincipalHoverColor);
+  transition: background-color 0.3s ease-in-out;
+}
+.containerLogOutButton {
+  padding: 0 1rem;
+  max-height: 5rem;
+}

@@ -1,0 +1,36 @@
+.container {
+  padding: 4rem 10rem;
+  width: 100%;
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleHeader {
+  color: #fff;
+  font-weight: normal;
+}
+.subtitleHeader {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.containerSelect {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.selectYear {
+  border-radius: 2px;
+  padding: 0.5rem 2rem;
+  height: max-content;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid var(--sideBarFontColor);
+}
+.selectYear:focus {
+  outline: none;
+}
+.selectYear option {
+  background-color: var(--sideBarDarkMode);
+}
