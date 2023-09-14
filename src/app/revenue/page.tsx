@@ -1,3 +1,4 @@
+import ChartContainer from '../components/ChartContainer';
 import styles from './page.module.css';
 const page = () => {
   return (
@@ -23,6 +24,7 @@ const page = () => {
           </select>
         </div>
       </header>
+      <ChartContainer />
     </main>
   );
 };

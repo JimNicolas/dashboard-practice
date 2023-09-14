@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+.containerButtons {
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--sideBarDarkMode);
+  position: relative;
+  margin: 0 auto;
+  width: max-content;
+}
+.containerButtons button {
+  border: none;
+  letter-spacing: 2px;
+  border-radius: 1rem;
+  padding: 0.2rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1;
+}
+.desactiveOption {
+  background-color: transparent;
+  color: var(--sideBarFontColor);
+}
+.desactiveOption:hover {
+  background-color: var(--sideBarDarkMode);
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+.activeOption {
+  color: var(--mainDarkMode);
+}

@@ -2,56 +2,51 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './sidebar.module.css';
-import { AiFillStar, AiOutlineBarChart } from 'react-icons/ai';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { BsCardChecklist } from 'react-icons/bs';
-import { LiaAddressCardSolid } from 'react-icons/lia';
-import { HiDocumentText } from 'react-icons/hi';
-import { TbReportSearch } from 'react-icons/tb';
-import { RiContactsBook2Fill } from 'react-icons/ri';
-import { BiSolidLogOut } from 'react-icons/bi';
 import { usePathname } from 'next/navigation';
+import { Icon } from '@iconify/react';
 const SIDEBAR_ELEMENTS = [
   {
     id: 0,
     label: 'Leads',
-    icon: <AiFillStar size={24} />,
+    icon: (
+      <Icon icon='material-symbols:star-rate-rounded' width={24} height={24} />
+    ),
     path: '/',
   },
   {
     id: 1,
     label: 'Revenue',
-    icon: <AiOutlineBarChart size={24} />,
+    icon: <Icon icon='gala:chart' width={24} height={24} />,
     path: '/revenue',
   },
   {
     id: 2,
     label: 'Accounts',
-    icon: <LiaAddressCardSolid size={24} />,
+    icon: <Icon icon='mdi:account-payment' width={24} height={24} />,
     path: '/accounts',
   },
   {
     id: 3,
     label: 'Files',
-    icon: <HiDocumentText size={24} />,
+    icon: <Icon icon='ph:files-fill' width={24} height={24} />,
     path: '/files',
   },
   {
     id: 4,
     label: 'Tasks',
-    icon: <BsCardChecklist size={24} />,
+    icon: <Icon icon='iconoir:task-list' width={24} height={24} />,
     path: '/tasks',
   },
   {
     id: 5,
     label: 'Reports',
-    icon: <TbReportSearch size={24} />,
+    icon: <Icon icon='mdi:file-report' width={24} height={24} />,
     path: '/reports',
   },
   {
     id: 6,
     label: 'Contacts',
-    icon: <RiContactsBook2Fill size={24} />,
+    icon: <Icon icon='ant-design:contacts-filled' width={24} height={24} />,
     path: '/contacts',
   },
 ];
@@ -73,7 +68,7 @@ export const SideBar = () => {
         style={{ alignItems: sideBarExtended ? 'flex-start' : 'center' }}
       >
         <button className={styles.toggleButton} onClick={handleToggleSideBar}>
-          <GiHamburgerMenu className={styles.toggleIcon} size={'24'} />
+          <Icon icon='pepicons-pop:menu' width={24} height={24} />
         </button>
         <ul className={styles.containerElements}>
           {SIDEBAR_ELEMENTS.map((element) => (
@@ -88,7 +83,7 @@ export const SideBar = () => {
                   justifyContent: sideBarExtended ? 'flex-start' : 'center',
                 }}
               >
-                {element.icon}
+                {element?.icon}
                 {sideBarExtended ? element.label : ''}
               </Link>
             </li>
@@ -97,7 +92,11 @@ export const SideBar = () => {
       </div>
       <div className={styles.containerLogOutButton}>
         <button className={styles.logOutButton}>
-          {sideBarExtended ? 'Log Out' : <BiSolidLogOut size={20} />}
+          {sideBarExtended ? (
+            'Log Out'
+          ) : (
+            <Icon icon='tabler:logout' width={24} height={20} />
+          )}
         </button>
       </div>
     </nav>
