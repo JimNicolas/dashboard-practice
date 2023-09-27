@@ -1,53 +1,91 @@
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import styles from './sidebar.module.css';
-import { usePathname } from 'next/navigation';
-import { Icon } from '@iconify/react';
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import styles from "./sidebar.module.css";
+import { usePathname } from "next/navigation";
+import { Icon } from "@iconify/react";
+
 const SIDEBAR_ELEMENTS = [
   {
     id: 0,
-    label: 'Leads',
+    label: "Leads",
     icon: (
-      <Icon icon='material-symbols:star-rate-rounded' width={24} height={24} />
+      <div>
+        <Icon
+          icon="material-symbols:star-rate-rounded"
+          width={24}
+          height={24}
+        />
+      </div>
     ),
-    path: '/',
+
+    path: "/",
   },
   {
     id: 1,
-    label: 'Revenue',
-    icon: <Icon icon='gala:chart' width={24} height={24} />,
-    path: '/revenue',
+    label: "Revenue",
+    icon: (
+      <div>
+        <Icon icon="gala:chart" width={24} height={24} />
+      </div>
+    ),
+
+    path: "/revenue",
   },
   {
     id: 2,
-    label: 'Accounts',
-    icon: <Icon icon='mdi:account-payment' width={24} height={24} />,
-    path: '/accounts',
+    label: "Accounts",
+    icon: (
+      <div>
+        <Icon icon="mdi:account-payment" width={24} height={24} />
+      </div>
+    ),
+
+    path: "/accounts",
   },
   {
     id: 3,
-    label: 'Files',
-    icon: <Icon icon='ph:files-fill' width={24} height={24} />,
-    path: '/files',
+    label: "Files",
+    icon: (
+      <div>
+        <Icon icon="ph:files-fill" width={24} height={24} />
+      </div>
+    ),
+
+    path: "/files",
   },
   {
     id: 4,
-    label: 'Tasks',
-    icon: <Icon icon='iconoir:task-list' width={24} height={24} />,
-    path: '/tasks',
+    label: "Tasks",
+    icon: (
+      <div>
+        <Icon icon="iconoir:task-list" width={24} height={24} />
+      </div>
+    ),
+
+    path: "/tasks",
   },
   {
     id: 5,
-    label: 'Reports',
-    icon: <Icon icon='mdi:file-report' width={24} height={24} />,
-    path: '/reports',
+    label: "Reports",
+    icon: (
+      <div>
+        <Icon icon="mdi:file-report" width={24} height={24} />
+      </div>
+    ),
+
+    path: "/reports",
   },
   {
     id: 6,
-    label: 'Contacts',
-    icon: <Icon icon='ant-design:contacts-filled' width={24} height={24} />,
-    path: '/contacts',
+    label: "Contacts",
+    icon: (
+      <div>
+        <Icon icon="ant-design:contacts-filled" width={24} height={24} />
+      </div>
+    ),
+
+    path: "/contacts",
   },
 ];
 export const SideBar = () => {
@@ -58,17 +96,16 @@ export const SideBar = () => {
   };
   return (
     <nav
-      className={`
-          ${styles.sideBar} ${
+      className={`${styles.sideBar} ${
         sideBarExtended ? styles.showSideBar : styles.closeSideBar
       }`}
     >
       <div
         className={styles.containerTopElements}
-        style={{ alignItems: sideBarExtended ? 'flex-start' : 'center' }}
+        style={{ alignItems: sideBarExtended ? "flex-start" : "center" }}
       >
         <button className={styles.toggleButton} onClick={handleToggleSideBar}>
-          <Icon icon='pepicons-pop:menu' width={24} height={24} />
+          <Icon icon="pepicons-pop:menu" width={24} height={24} />
         </button>
         <ul className={styles.containerElements}>
           {SIDEBAR_ELEMENTS.map((element) => (
@@ -80,11 +117,11 @@ export const SideBar = () => {
                   element.path === pathname ? styles.activeLink : null
                 }`}
                 style={{
-                  justifyContent: sideBarExtended ? 'flex-start' : 'center',
+                  justifyContent: sideBarExtended ? "flex-start" : "center",
                 }}
               >
                 {element?.icon}
-                {sideBarExtended ? element.label : ''}
+                <span className={styles.iconText}>{element.label}</span>
               </Link>
             </li>
           ))}
@@ -93,9 +130,9 @@ export const SideBar = () => {
       <div className={styles.containerLogOutButton}>
         <button className={styles.logOutButton}>
           {sideBarExtended ? (
-            'Log Out'
+            "Log Out"
           ) : (
-            <Icon icon='tabler:logout' width={24} height={20} />
+            <Icon icon="tabler:logout" width={24} height={20} />
           )}
         </button>
       </div>

@@ -1,9 +1,11 @@
 .container {
   padding: 4rem 10rem;
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  flex: 1;
+  height: 100vh;
+  overflow: hidden auto;
 }
 .headerContainer {
   display: flex;
@@ -38,7 +40,7 @@
 .selectYear option {
   background-color: var(--sideBarDarkMode);
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .container {
     padding-left: 2rem;
     padding-right: 2rem;

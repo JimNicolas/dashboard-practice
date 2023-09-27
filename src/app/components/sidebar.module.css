@@ -4,17 +4,42 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
+  transition: flex-basis .5s ease-in-out, padding 0.5s ease-in-out;
 }
 .showSideBar {
-  width: 24rem;
-  padding: 6rem 2rem;
-  transition: all 0.5s ease-in-out;
+  padding: 4rem 2rem;
+  flex-basis: 20rem; /* Cambiado de flex a flex-basis */
+  min-width: 8rem;
 }
 .closeSideBar {
-  width: 8rem;
-  padding: 6rem 0;
-  transition: width 0.5s ease-in-out;
+  padding: 4rem 0;
+  flex-basis:8rem;
+}
+.iconText {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: display 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+/* cuando el sidebar está abierto */
+.showSideBar .iconText {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  transition: opacity 0.3s ease-in-out;
+  animation: showLabel 0.1s ease-in-out;
+
+}
+@keyframes showLabel{
+  0%{
+    display: none;
+  }
+  80%{
+    display: none;
+  }
+  90%{
+    display: flex;
+  }
 }
 .elementLink {
   display: flex;
@@ -32,6 +57,7 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  overflow: hidden;
 }
 .toggleButton {
   background-color: transparent;

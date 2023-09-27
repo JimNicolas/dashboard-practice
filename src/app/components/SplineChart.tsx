@@ -16,8 +16,15 @@ export default function SplineChart({}: Props) {
   const config = {
     options: {
       chart: {
-        width: 500,
-        height: 300,
+        width: "100%",
+        height: "auto",
+      },
+      fill: {
+        type: "solid",
+        opacity: 0,
+      },
+      stroke: {
+        curve: "smooth",
       },
       xaxis: {
         categories: MONTHS,
@@ -62,7 +69,7 @@ export default function SplineChart({}: Props) {
     ],
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 100,
         options: {},
       },
     ],
@@ -74,8 +81,10 @@ export default function SplineChart({}: Props) {
         options={config.options}
         series={config.series}
         type="area"
-        // height="400"
-        // width="1000"
+        height={"100%"}
+        style={{
+          width: "100%",
+        }}
       />
     </div>
   );
