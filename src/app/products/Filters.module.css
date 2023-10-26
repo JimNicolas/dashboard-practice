@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.container select, .aplicar {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--selectStyle);
+  color: #FFFFFF;
+  cursor:pointer;
+}
+.container select:hover{
+  background-color: var(--selectStyleHover);
+  transition: background-color 0.2s ease;
+}
+.aplicar{
+  background-color: var(--buttonThemeApply);
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 2rem;
+}
+.aplicar:hover{
+  background-color: var(--buttonThemeApplyHover);
+  transition: background-color 0.3s ease-in-out;
+  color: #efeeee;
+}

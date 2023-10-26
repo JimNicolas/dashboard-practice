@@ -4,16 +4,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: flex-basis .5s ease-in-out, padding 0.5s ease-in-out;
+  transition: flex-basis 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
 .showSideBar {
   padding: 4rem 2rem;
-  flex-basis: 20rem; /* Cambiado de flex a flex-basis */
+  flex-basis: 22rem; /* Cambiado de flex a flex-basis */
   min-width: 8rem;
 }
 .closeSideBar {
   padding: 4rem 0;
-  flex-basis:8rem;
+  flex-basis: 8rem;
 }
 .iconText {
   opacity: 0;
@@ -28,16 +28,15 @@
   display: flex;
   transition: opacity 0.3s ease-in-out;
   animation: showLabel 0.1s ease-in-out;
-
 }
-@keyframes showLabel{
-  0%{
+@keyframes showLabel {
+  0% {
     display: none;
   }
-  80%{
+  80% {
     display: none;
   }
-  90%{
+  90% {
     display: flex;
   }
 }

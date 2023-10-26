@@ -1,91 +1,91 @@
-"use client";
-import React, { useState } from "react";
-import Link from "next/link";
-import styles from "./sidebar.module.css";
-import { usePathname } from "next/navigation";
-import { Icon } from "@iconify/react";
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import styles from './sidebar.module.css';
+import { usePathname } from 'next/navigation';
+import { Icon } from '@iconify/react';
 
 const SIDEBAR_ELEMENTS = [
   {
     id: 0,
-    label: "Leads",
+    label: 'Inicio',
+    icon: (
+      <div>
+        <Icon icon='iconamoon:home-fill' width={24} height={24} />
+      </div>
+    ),
+
+    path: '/',
+  },
+  {
+    id: 1,
+    label: 'Productos',
     icon: (
       <div>
         <Icon
-          icon="material-symbols:star-rate-rounded"
+          icon='streamline:shopping-catergories-chair-design-lounge-furniture-chair-interior-decorate-armchair-decoration'
           width={24}
           height={24}
         />
       </div>
     ),
 
-    path: "/",
-  },
-  {
-    id: 1,
-    label: "Revenue",
-    icon: (
-      <div>
-        <Icon icon="gala:chart" width={24} height={24} />
-      </div>
-    ),
-
-    path: "/revenue",
+    path: '/products',
   },
   {
     id: 2,
-    label: "Accounts",
+    label: 'Ventas',
     icon: (
       <div>
-        <Icon icon="mdi:account-payment" width={24} height={24} />
+        <Icon icon='gala:chart' width={24} height={24} />
       </div>
     ),
 
-    path: "/accounts",
+    path: '/sales',
   },
   {
     id: 3,
-    label: "Files",
+    label: 'Pedidos',
     icon: (
       <div>
-        <Icon icon="ph:files-fill" width={24} height={24} />
+        <Icon icon='carbon:delivery-add' width={24} height={24} />
       </div>
     ),
 
-    path: "/files",
+    path: '/orders',
   },
   {
     id: 4,
-    label: "Tasks",
+    label: 'Clientes',
     icon: (
       <div>
-        <Icon icon="iconoir:task-list" width={24} height={24} />
+        <Icon icon='mdi:user-box' width={24} height={24} />
       </div>
     ),
 
-    path: "/tasks",
+    path: '/clients',
   },
   {
     id: 5,
-    label: "Reports",
+    label: 'Soporte',
     icon: (
       <div>
-        <Icon icon="mdi:file-report" width={24} height={24} />
+        <Icon icon='mdi:support' width={24} height={24} />
       </div>
     ),
 
-    path: "/reports",
+    path: '/support',
   },
   {
     id: 6,
-    label: "Contacts",
+    label: 'Configuración',
     icon: (
       <div>
-        <Icon icon="ant-design:contacts-filled" width={24} height={24} />
+        <Icon icon='solar:settings-bold-duotone' width={24} height={24} />
       </div>
     ),
 
-    path: "/contacts",
+    path: '/settings',
   },
 ];
 export const SideBar = () => {
@@ -102,10 +102,10 @@ export const SideBar = () => {
     >
       <div
         className={styles.containerTopElements}
-        style={{ alignItems: sideBarExtended ? "flex-start" : "center" }}
+        style={{ alignItems: sideBarExtended ? 'flex-start' : 'center' }}
       >
         <button className={styles.toggleButton} onClick={handleToggleSideBar}>
-          <Icon icon="pepicons-pop:menu" width={24} height={24} />
+          <Icon icon='pepicons-pop:menu' width={24} height={24} />
         </button>
         <ul className={styles.containerElements}>
           {SIDEBAR_ELEMENTS.map((element) => (
@@ -117,7 +117,7 @@ export const SideBar = () => {
                   element.path === pathname ? styles.activeLink : null
                 }`}
                 style={{
-                  justifyContent: sideBarExtended ? "flex-start" : "center",
+                  justifyContent: sideBarExtended ? 'flex-start' : 'center',
                 }}
               >
                 {element?.icon}
@@ -130,9 +130,9 @@ export const SideBar = () => {
       <div className={styles.containerLogOutButton}>
         <button className={styles.logOutButton}>
           {sideBarExtended ? (
-            "Log Out"
+            'Log Out'
           ) : (
-            <Icon icon="tabler:logout" width={24} height={20} />
+            <Icon icon='tabler:logout' width={24} height={20} />
           )}
         </button>
       </div>

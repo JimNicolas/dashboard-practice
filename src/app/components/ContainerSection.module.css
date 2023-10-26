@@ -1,0 +1,14 @@
+.container {
+    padding: 4rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex: 1;
+    height: 100vh;
+}
+@media (max-width: 600px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

@@ -1,20 +1,26 @@
-'use client';
-import { useState } from 'react';
-import styles from './chartContainer.module.css';
-import SplineChart from './SplineChart';
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import styles from "./chartContainer.module.css";
+
+// Importación dinámica de SplineChart
+const SplineChart = dynamic(
+  () => import("./SplineChart"),
+  { ssr: false }, // Esto deshabilitará la renderización en el servidor para SplineChart
+);
+
 const ChartContainer = () => {
   const FILTERS = [
     {
       id: 0,
-      name: 'Year',
+      name: "Year",
     },
     {
       id: 1,
-      name: 'Month',
+      name: "Month",
     },
     {
       id: 2,
-      name: 'Daily',
+      name: "Daily",
     },
   ];
   const [filterActive, setFilterActive] = useState(0);
@@ -24,6 +30,7 @@ const ChartContainer = () => {
   ) => {
     setFilterActive(id);
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.containerButtons}>
@@ -43,4 +50,5 @@ const ChartContainer = () => {
     </div>
   );
 };
+
 export default ChartContainer;

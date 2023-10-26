@@ -1,13 +1,16 @@
+"use client";
 import styles from "./page.module.css";
 import ChartContainer from "@/app/components/ChartContainer";
 import TotalSales from "@/app/components/revenue/TotalSales";
+import ContainerSection from "@/app/components/ContainerSection";
+import TitleSection from "@/app/components/TitleSection";
 
 const page = () => {
   return (
-    <main className={styles.container}>
+    <ContainerSection>
       <header className={styles.headerContainer}>
         <div className={styles.containerTitle}>
-          <h1 className={styles.titleHeader}>Sales Report</h1>
+          <TitleSection>Sales Report</TitleSection>
           <h2 className={styles.subtitleHeader}>Overview of product sales</h2>
         </div>
         <div className={styles.containerSelect}>
@@ -30,7 +33,7 @@ const page = () => {
       <section>
         <TotalSales />
       </section>
-    </main>
+    </ContainerSection>
   );
 };
 export default page;

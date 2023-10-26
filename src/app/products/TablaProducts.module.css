@@ -1,0 +1,38 @@
+.row {
+}
+.row th {
+  color: white;
+  padding: 5px 10px;
+  text-align: left;
+}
+.tabla tr:nth-child(even) {
+  background-color: var(--secundaryGrid);
+}
+.column th {
+  color: #d3d3d3;
+}
+.rowData th {
+  font-weight: 400;
+}
+.containerButtons {
+}
+.containerButtons button {
+  margin: 0.5rem;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.rowData {
+  height: 5rem;
+}
+.eliminar {
+  background-color: #cb2f2f;
+}
+.editar {
+  background-color: #28b228;
+}
+.detalles {
+  background-color: var(--buttonPrincipalColor);
+}

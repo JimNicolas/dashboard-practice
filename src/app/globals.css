@@ -9,6 +9,12 @@
   --sideBarActiveAndHoverElement: #3c3e5b;
   --buttonPrincipalColor: #5965e7;
   --buttonPrincipalHoverColor: #4f59cb;
+  --selectStyle: #1E2A38;
+  --selectStyleHover: #283b52;
+  --buttonThemeApply:#4A90E2;
+  --buttonThemeApplyHover:#3C7EDF;
+/*  Theme Grid*/
+  --secundaryGrid:#272B3D;
 }
 html {
   font-size: 62.5%;

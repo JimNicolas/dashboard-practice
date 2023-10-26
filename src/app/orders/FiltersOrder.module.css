@@ -1,0 +1,43 @@
+.containerFilters{
+    border-bottom: 2px solid #3A3E50;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.containerButtons button{
+    background-color: transparent;
+    border:none;
+    padding:1rem 2rem;
+    color: white;
+    cursor:pointer;
+}
+.containerFilters button:hover{
+    color: var(--buttonThemeApply);
+}
+.containerSearch{
+    display: flex;
+    justify-content: flex-end;
+}
+.containerSearch button{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+.containerSearch input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 0 1rem;
+}
+.closeInput{
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+
+}
+.openInput{
+    width: 36rem;
+    transition: width 0.5s ease-in-out;
+}
+.openInput:focus{
+    outline: none;
+}

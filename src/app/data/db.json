@@ -1,0 +1,44 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Camiseta Estampada",
+      "precio": 25.99,
+      "imagen": "/assets/products/img.png",
+      "stock": 120,
+      "categoria": "Ropa",
+      "descripcion": "Camiseta de algodón con estampado frontal. Disponible en varios tamaños.",
+      "marca": "ModaTrend"
+    },
+    {
+      "id": "2",
+      "nombre": "Zapatillas Deportivas",
+      "precio": 89.95,
+      "imagen": "/assets/products/img.png",
+      "stock": 45,
+      "categoria": "Calzado",
+      "descripcion": "Zapatillas deportivas cómodas para correr. Tecnología de amortiguación avanzada.",
+      "marca": "RunFast"
+    },
+    {
+      "id": "3",
+      "nombre": "Smartwatch Serie X",
+      "precio": 199.0,
+      "imagen": "/assets/products/img.png",
+      "stock": 30,
+      "categoria": "Electrónica",
+      "descripcion": "Smartwatch con funciones avanzadas, monitor de ritmo cardíaco y GPS.",
+      "marca": "TechLife"
+    },
+    {
+      "id": "4",
+      "nombre": "Mochila Urbana",
+      "precio": 49.9,
+      "imagen": "/assets/products/img.png",
+      "stock": 80,
+      "categoria": "Accesorios",
+      "descripcion": "Mochila con diseño urbano y múltiples compartimentos. Resistente al agua.",
+      "marca": "CityGear"
+    }
+  ]
+}
